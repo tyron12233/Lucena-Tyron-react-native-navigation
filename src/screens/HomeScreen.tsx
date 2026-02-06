@@ -17,7 +17,7 @@ const HomeScreen = () => {
     <FadeInView delay={index * 100} style={[styles.productCard, { backgroundColor: colors.card, shadowColor: theme === 'light' ? '#000' : 'transparent' }]}>
       <View style={styles.productInfo}>
         <Text style={[styles.productName, { color: colors.text }]}>{item.name}</Text>
-        <Text style={[styles.productPrice, { color: colors.secondaryText }]}>${item.price.toFixed(2)}</Text>
+        <Text style={[styles.productPrice, { color: colors.secondaryText }]}>₱{item.price.toFixed(2)}</Text>
       </View>
       <ScaleButton
         style={[styles.addButton, { backgroundColor: colors.primary }]}

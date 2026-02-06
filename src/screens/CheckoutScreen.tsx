@@ -33,7 +33,7 @@ const CheckoutScreen = () => {
         <Text style={[styles.itemName, { color: colors.text }]}>{item.name}</Text>
         <Text style={[styles.itemQuantity, { color: colors.secondaryText }]}>Quantity: {item.quantity}</Text>
       </View>
-      <Text style={[styles.itemPrice, { color: colors.text }]}>${(item.price * item.quantity).toFixed(2)}</Text>
+      <Text style={[styles.itemPrice, { color: colors.text }]}>₱{(item.price * item.quantity).toFixed(2)}</Text>
     </View>
   );
 
@@ -58,7 +58,7 @@ const CheckoutScreen = () => {
           ListFooterComponent={
             <View style={[styles.totalRow, { borderTopColor: colors.border }]}>
               <Text style={[styles.totalLabel, { color: colors.secondaryText }]}>Total Amount</Text>
-              <Text style={[styles.totalValue, { color: colors.text }]}>${totalPrice.toFixed(2)}</Text>
+              <Text style={[styles.totalValue, { color: colors.text }]}>₱{totalPrice.toFixed(2)}</Text>
             </View>
           }
         />

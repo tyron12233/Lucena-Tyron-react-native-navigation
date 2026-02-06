@@ -16,7 +16,7 @@ const CartScreen = () => {
     <FadeInView delay={index * 50} style={[styles.itemCard, { backgroundColor: colors.card, shadowColor: theme === 'light' ? '#000' : 'transparent' }]}>
       <View style={styles.itemInfo}>
         <Text style={[styles.itemName, { color: colors.text }]}>{item.name}</Text>
-        <Text style={[styles.itemPrice, { color: colors.secondaryText }]}>${(item.price * item.quantity).toFixed(2)}</Text>
+        <Text style={[styles.itemPrice, { color: colors.secondaryText }]}>₱{(item.price * item.quantity).toFixed(2)}</Text>
       </View>
       <View style={[styles.quantityContainer, { backgroundColor: theme === 'light' ? '#E5E5EA' : '#2C2C2E' }]}>
         <ScaleButton
@@ -62,7 +62,7 @@ const CartScreen = () => {
         <View style={[styles.footer, { backgroundColor: colors.background, borderTopColor: colors.border }]}>
           <View style={styles.totalContainer}>
             <Text style={[styles.totalLabel, { color: colors.secondaryText }]}>Total Balance</Text>
-            <Text style={[styles.totalValue, { color: colors.text }]}>${totalPrice.toFixed(2)}</Text>
+            <Text style={[styles.totalValue, { color: colors.text }]}>₱{totalPrice.toFixed(2)}</Text>
           </View>
           <ScaleButton
             style={[styles.checkoutButton, { backgroundColor: colors.primary }]}
